@@ -17,7 +17,6 @@ Wed Apr 13 10:57:39 PDT 2016
 import sys
 import operator
 import collections
-import itertools
 import numpy
 import pysam
 from Bio import SeqIO
@@ -115,7 +114,7 @@ def _find_contribs_from_reads(read_hap_mat, wts, args):
     best_haps = numpy.argmax(read_hap_mat, 1)
     vote_count = collections.defaultdict(int)
 
-    for hap, read_count in itertools.izip(best_haps, wts):
+    for hap, read_count in zip(best_haps, wts):
         vote_count[hap] += read_count
 
     contributors = [con for con in vote_count
