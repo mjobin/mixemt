@@ -223,7 +223,7 @@ def update_contribs(contribs, em_results, haps):
         The update contributor table
     """
     props, _ = em_results
-    props_by_hap = {haps[i]:props[i] for i in xrange(len(haps))}
+    props_by_hap = {haps[i]:props[i] for i in range(len(haps))}
     for con in contribs:
         haplogroup = con[1]
         con[2] = props_by_hap[haplogroup]
@@ -316,7 +316,7 @@ def assign_read_indexes(contribs, em_results, haps, reads, min_fold):
 
     index_to_hap = {haps.index(group):hap_n for hap_n, group, _ in contribs}
     con_indexes = set(index_to_hap.keys())
-    for read_i in xrange(len(reads)):
+    for read_i in range(len(reads)):
         if len(contribs) > 1:
             read_probs = read_hap_mat[read_i, ] - log_props
             best_hap, next_hap = _find_best_n_for_read(read_probs,
@@ -461,7 +461,7 @@ def call_consensus(refseq, alns, min_cov, args, strict=True):
         return ""
     obs_tab = observe.ObservedBases(alns, args.min_mq, args.min_bq)
     cons_bases = [consensus_base(obs_tab.obs_at(pos))
-                  for pos in xrange(len(refseq))]
+                  for pos in range(len(refseq))]
     return str(''.join(cons_bases))
 
 
@@ -486,7 +486,7 @@ def find_new_variants(refseq, contrib_reads, args):
         return {} # no contributors, no new variants.
 
     min_cons_len = min([len(contrib_cons[cons]) for cons in contrib_cons])
-    for pos in xrange(min_cons_len):
+    for pos in range(min_cons_len):
         if any([cons[pos] in 'N-' for cons in contrib_cons.values()]):
             # skip Ns or reference position skips
             continue

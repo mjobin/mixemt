@@ -473,7 +473,7 @@ def _read_phy_line(line):
         hap_id: The haplogroup ID for this entry (can be '')
         variants: List of variant strings for this node.
     """
-    items = line.rstrip().split(',')
+    items = line.decode("utf-8").rstrip().split(',')
     level = 0
     while items[level] == '':
         level += 1
@@ -492,7 +492,7 @@ def main():
         with open(phy_fn, 'r') as phy_in:
             phy = Phylotree(phy_in, anon_haps=True)
             for hap in phy.hap_var:
-                print hap, ','.join(phy.hap_var[hap])
+                print (hap, ','.join(phy.hap_var[hap]))
     else:
         phy = example()
         hap_var = dict({'A':['A1G', 'A2T', 'A4T'],
@@ -505,8 +505,8 @@ def main():
                         'H':['A1G', 'A3T', 'A5T'],
                         'I':['A1G']})
         for hap in sorted(phy.hap_var):
-            print hap, phy.hap_var[hap], hap_var[hap]
-        print phy.variants
+            print (hap, phy.hap_var[hap], hap_var[hap])
+        print (phy.variants)
         phy.root.dump()
     return 0
 
