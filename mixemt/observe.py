@@ -8,6 +8,8 @@ information as well as gaps.
 Sam Vohr (svohr@soe.ucsc.edu)
 Mon Jul  4 11:06:25 PDT 2016
 
+Converted to run in Python 3 by Matthew Jobin at Arc Bio, July 2019.
+
 """
 
 import collections

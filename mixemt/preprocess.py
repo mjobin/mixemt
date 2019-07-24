@@ -10,6 +10,8 @@ and without using too much memory.
 Sam Vohr (svohr@soe.ucsc.edu)
 Wed Apr  6 10:48:21 PDT 2016
 
+Converted to run in Python 3 by Matthew Jobin at Arc Bio, July 2019.
+
 """
 
 import sys

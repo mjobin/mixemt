@@ -12,6 +12,8 @@ Sam Vohr (svohr@soe.ucsc.edu)
 
 Wed Apr 13 10:57:39 PDT 2016
 
+Converted to run in Python 3 by Matthew Jobin at Arc Bio, July 2019.
+
 """
 
 import sys

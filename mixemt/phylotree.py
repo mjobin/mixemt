@@ -5,6 +5,8 @@ and building a matrix to represent these markers.
 
 Mon Apr  4 12:00:54 PDT 2016
 
+Converted to run in Python 3 by Matthew Jobin at Arc Bio, July 2019.
+
 """
 
 import sys

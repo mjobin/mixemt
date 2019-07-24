@@ -9,6 +9,8 @@ proportions.
 Sam Vohr (svohr@soe.ucsc.edu)
 Mon Apr  4 09:38:08 PDT 2016
 
+Converted to run in Python 3 by Matthew Jobin at Arc Bio, July 2019.
+
 """
 
 import sys

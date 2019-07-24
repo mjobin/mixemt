@@ -21,6 +21,8 @@ haplotypes from phylotree.
 
 4. Output fragments by contributing haplotype.
 
+Converted to run in Python 3 by Matthew Jobin at Arc Bio, July 2019.
+
 """
 
 import sys

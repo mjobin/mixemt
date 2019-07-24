@@ -6,6 +6,8 @@ and raw numbers for visualization with another tool.
 
 Sam Vohr (svohr@soe.ucsc.edu)
 Fri May 20 14:04:02 PDT 2016
+
+Converted to run in Python 3 by Matthew Jobin at Arc Bio, July 2019.
 """
 
 
